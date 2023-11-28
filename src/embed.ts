@@ -55,6 +55,9 @@ export type StarboardNotebookIFrameOptions<ReceivedMessageType = OutboundNoteboo
    * Notebook content to initialize the iframe with
    */
   notebookContent?: Promise<string> | string;
+  zipUrl?: string;
+  suggestionUrl?: string;
+  bearerToken?: string;
 
   onNotebookReadySignalMessage(payload: ReadySignalMessage["payload"]): void;
 
@@ -97,7 +100,7 @@ function loadDefaultSettings(
     sandbox:
       opts.sandbox ??
       el.getAttribute("sandbox") ??
-      "allow-scripts allow-modals allow-same-origin allow-pointer-lock allow-top-navigation-by-user-activation allow-forms allow-downloads",
+      "allow-scripts allow-modals allow-same-origin allow-pointer-lock allow-top-navigation-by-user-activation allow-forms allow-downloads allow-popups",
     allow: opts.allow ?? el.getAttribute("allow") ?? getDefaultAllowAttributeValue(),
     onNotebookReadySignalMessage: opts.onNotebookReadySignalMessage ?? function () {},
     onContentUpdateMessage: opts.onContentUpdateMessage ?? function () {},
@@ -105,6 +108,9 @@ function loadDefaultSettings(
     onMessage: opts.onMessage ?? function () {},
     onUnsavedChangesStatusChange: opts.onUnsavedChangesStatusChange ?? function () {},
     notebookContent: opts.notebookContent,
+    zipUrl: opts.zipUrl,
+    suggestionUrl: opts.suggestionUrl,
+    bearerToken: opts.bearerToken,
     preventNavigationWithUnsavedChanges: opts.preventNavigationWithUnsavedChanges ?? false,
   };
 }
@@ -209,9 +215,11 @@ export class StarboardEmbed extends HTMLElement {
           const content = await options.notebookContent;
           this.notebookContent = content;
           this.lastSavedNotebookContent = this.notebookContent;
+
+          // todo: add new params here to send
           this.sendMessage({
             type: "NOTEBOOK_SET_INIT_DATA",
-            payload: { content, baseUrl: options.baseUrl },
+            payload: { content, baseUrl: options.baseUrl, zipUrl: options.zipUrl, suggestionUrl: options.suggestionUrl, bearerToken: options.bearerToken },
           });
         } else {
           this.notebookContent = msg.payload.content;

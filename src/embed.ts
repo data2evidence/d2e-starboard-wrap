@@ -216,7 +216,6 @@ export class StarboardEmbed extends HTMLElement {
           this.notebookContent = content;
           this.lastSavedNotebookContent = this.notebookContent;
 
-          // todo: add new params here to send
           this.sendMessage({
             type: "NOTEBOOK_SET_INIT_DATA",
             payload: { content, baseUrl: options.baseUrl, zipUrl: options.zipUrl, suggestionUrl: options.suggestionUrl, bearerToken: options.bearerToken },

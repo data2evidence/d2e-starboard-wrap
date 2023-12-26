@@ -10,7 +10,7 @@ import {
   OutboundNotebookMessage,
   ReadySignalMessage,
   SaveMessage,
-} from "starboard-notebook/dist/src/types/messages";
+} from "@gesundheitscloud/alp-starboard-notebook/dist/src/types/messages";
 import { flatPromise } from "./flatPromise";
 
 function getDefaultAllowAttributeValue() {

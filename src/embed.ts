@@ -10,7 +10,7 @@ import {
   OutboundNotebookMessage,
   ReadySignalMessage,
   SaveMessage,
-} from "starboard-notebook/dist/src/types/messages";
+} from "@gesundheitscloud/alp-starboard-notebook/dist/src/types/messages";
 import { flatPromise } from "./flatPromise";
 
 function getDefaultAllowAttributeValue() {
@@ -218,7 +218,7 @@ export class StarboardEmbed extends HTMLElement {
 
           this.sendMessage({
             type: "NOTEBOOK_SET_INIT_DATA",
-            payload: { content, baseUrl: options.baseUrl, zipUrl: options.zipUrl, suggestionUrl: options.suggestionUrl, bearerToken: options.bearerToken },
+            payload: { content, baseUrl: options.baseUrl, suggestionUrl: options.suggestionUrl, bearerToken: options.bearerToken },
           });
         } else {
           this.notebookContent = msg.payload.content;

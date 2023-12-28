@@ -1,6 +1,6 @@
 {
   "name": "@gesundheitscloud/alp-starboard-wrap",
-  "version": "1.0.0",
+  "version": "1.0.0a",
   "description": "Wrapper element and helpers for alp-starboard-notebook",
   "main": "dist/index.js",
   "scripts": {

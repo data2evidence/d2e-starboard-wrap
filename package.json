@@ -1,5 +1,5 @@
 {
-  "name": "@gesundheitscloud/alp-starboard-wrap",
+  "name": "@alp-os/alp-starboard-wrap",
   "version": "1.0.0",
   "description": "Wrapper element and helpers for alp-starboard-notebook",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gesundheitscloud/alp-starboard-wrap"
+    "url": "https://github.com/alp-os/alp-starboard-wrap"
   },
   "keywords": [
     "starboard",
@@ -37,7 +37,7 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@gesundheitscloud/alp-starboard-notebook": "^1.0.0",
+    "@alp-os/alp-starboard-notebook": "^1.0.0",
     "@ungap/custom-elements": "^0.1.15"
   }
 }

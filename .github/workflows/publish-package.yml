@@ -1,6 +1,8 @@
 name: Publish alp-starboard-wrap to GitHub Packages
 on:
   workflow_dispatch:
+  push:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +15,7 @@ jobs:
         with:
           node-version: "16.16.x"
           registry-url: "https://npm.pkg.github.com"
-          scope: "@gesundheitscloud"
+          scope: "@alp-os"
       - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

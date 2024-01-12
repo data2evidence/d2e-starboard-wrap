@@ -37,7 +37,7 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@alp-os/alp-starboard-notebook": "https://github.com/alp-os/alp-starboard-notebook-base#d4l-0.15.7-develop",
+    "@alp-os/alp-starboard-notebook": "git+https://github.com/alp-os/alp-starboard-notebook-base#d4l-0.15.7-develop",
     "@ungap/custom-elements": "^0.1.15"
   }
 }

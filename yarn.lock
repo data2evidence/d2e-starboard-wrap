@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@alp-os/alp-starboard-notebook@git+https://github.com/alp-os/alp-starboard-notebook-base.git#adapt-starboard-os-org":
+"@alp-os/alp-starboard-notebook@git+ssh://git@github.com/alp-os/alp-starboard-notebook-base.git#adapt-starboard-os-org":
   version "1.0.0"
-  resolved "git+https://github.com/alp-os/alp-starboard-notebook-base.git#1b7b676774b3605d6b5350fd4ef779284e4ebd4f"
+  resolved "git+ssh://git@github.com/alp-os/alp-starboard-notebook-base.git#6402d7ceeb190a693c73c0f0822b0158bf25643d"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4":
   version "7.23.5"

@@ -10,7 +10,7 @@ import {
   OutboundNotebookMessage,
   ReadySignalMessage,
   SaveMessage,
-} from "@alp-os/alp-starboard-notebook/dist/src/types/messages";
+} from "@alp-os/alp-starboard-notebook/packages/starboard-notebook/dist/src/types/messages";
 import { flatPromise } from "./flatPromise";
 
 function getDefaultAllowAttributeValue() {

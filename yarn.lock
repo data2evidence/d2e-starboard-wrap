@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@alp-os/alp-starboard-notebook@git+ssh://git@github.com/alp-os/alp-starboard-notebook-base.git#d4l-0.15.7-develop":
+"@data2evidence/d2e-starboard-notebook@https://github.com/data2evidence/d2e-starboard-notebook-base.git#d4l-0.15.7-develop":
   version "1.0.0"
-  resolved "git+ssh://git@github.com/alp-os/alp-starboard-notebook-base.git#f5e21f8620e4571c448b07005b20bc875c2b402e"
+  resolved "https://github.com/data2evidence/d2e-starboard-notebook-base.git#f5e21f8620e4571c448b07005b20bc875c2b402e"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4":
   version "7.23.5"

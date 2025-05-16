@@ -10,7 +10,7 @@ import {
   OutboundNotebookMessage,
   ReadySignalMessage,
   SaveMessage,
-} from "@data2evidence/d2e-starboard-notebook/packages/starboard-notebook/dist/src/types/messages";
+} from "../../d2e-starboard-notebook-base/packages/starboard-notebook/dist/src/types/messages";
 import { flatPromise } from "./flatPromise";
 
 function getDefaultAllowAttributeValue() {
@@ -57,7 +57,7 @@ export type StarboardNotebookIFrameOptions<ReceivedMessageType = OutboundNoteboo
   notebookContent?: Promise<string> | string;
   serverUrl?: string;
   token?: string;
-  userid?: string;
+  userId?: string;
   datasetId?: string;
 
   onNotebookReadySignalMessage(payload: ReadySignalMessage["payload"]): void;
@@ -111,7 +111,7 @@ function loadDefaultSettings(
     notebookContent: opts.notebookContent,
     serverUrl: opts.serverUrl,
     token: opts.token,
-    userid: opts.userid,
+    userId: opts.userId,
     datasetId: opts.datasetId,
     preventNavigationWithUnsavedChanges: opts.preventNavigationWithUnsavedChanges ?? false,
   };
@@ -220,7 +220,8 @@ export class StarboardEmbed extends HTMLElement {
 
           this.sendMessage({
             type: "NOTEBOOK_SET_INIT_DATA",
-            payload: { content, baseUrl: options.baseUrl, serverUrl: options.serverUrl, token: options.token, userid: options.userid, datasetid: options.datasetId },
+            //@ts-ignore
+            payload: { content, baseUrl: options.baseUrl, serverUrl: options.serverUrl, token: options.token, userId: options.userId, datasetId: options.datasetId },
           });
         } else {
           this.notebookContent = msg.payload.content;

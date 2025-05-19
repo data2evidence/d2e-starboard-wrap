@@ -1,4 +1,4 @@
-import { ContentUpdateMessage, InboundNotebookMessage, NotebookMessage, OutboundNotebookMessage, ReadySignalMessage, SaveMessage } from "../../d2e-starboard-notebook-base/packages/starboard-notebook/dist/src/types/messages";
+import { ContentUpdateMessage, InboundNotebookMessage, NotebookMessage, OutboundNotebookMessage, ReadySignalMessage, SaveMessage } from "@data2evidence/d2e-starboard-notebook/packages/starboard-notebook/dist/src/types/messages";
 export type StarboardNotebookIFrameOptions<ReceivedMessageType = OutboundNotebookMessage> = {
     /**
      * Optionally you can pass the iframe to attach to. If you don't pass one here

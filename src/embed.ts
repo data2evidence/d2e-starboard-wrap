@@ -10,7 +10,7 @@ import {
   OutboundNotebookMessage,
   ReadySignalMessage,
   SaveMessage,
-} from "../../d2e-starboard-notebook-base/packages/starboard-notebook/dist/src/types/messages";
+} from "@data2evidence/d2e-starboard-notebook/packages/starboard-notebook/dist/src/types/messages";
 import { flatPromise } from "./flatPromise";
 
 function getDefaultAllowAttributeValue() {

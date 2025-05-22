@@ -1,4 +1,4 @@
-import { ContentUpdateMessage, InboundNotebookMessage, NotebookMessage, OutboundNotebookMessage, ReadySignalMessage, SaveMessage } from "@alp-os/alp-starboard-notebook/packages/starboard-notebook/dist/src/types/messages";
+import { ContentUpdateMessage, InboundNotebookMessage, NotebookMessage, OutboundNotebookMessage, ReadySignalMessage, SaveMessage } from "@data2evidence/d2e-starboard-notebook/packages/starboard-notebook/dist/src/types/messages";
 export type StarboardNotebookIFrameOptions<ReceivedMessageType = OutboundNotebookMessage> = {
     /**
      * Optionally you can pass the iframe to attach to. If you don't pass one here
@@ -12,9 +12,10 @@ export type StarboardNotebookIFrameOptions<ReceivedMessageType = OutboundNoteboo
      * Notebook content to initialize the iframe with
      */
     notebookContent?: Promise<string> | string;
-    zipUrl?: string;
-    suggestionUrl?: string;
-    bearerToken?: string;
+    serverUrl?: string;
+    token?: string;
+    userId?: string;
+    datasetId?: string;
     onNotebookReadySignalMessage(payload: ReadySignalMessage["payload"]): void;
     /**
      * Should return whether the saving was succesful or not.

@@ -65,9 +65,10 @@ var starboardWrap = (function (exports) {
           onMessage: (_m = opts.onMessage) !== null && _m !== void 0 ? _m : function () { },
           onUnsavedChangesStatusChange: (_o = opts.onUnsavedChangesStatusChange) !== null && _o !== void 0 ? _o : function () { },
           notebookContent: opts.notebookContent,
-          zipUrl: opts.zipUrl,
-          suggestionUrl: opts.suggestionUrl,
-          bearerToken: opts.bearerToken,
+          serverUrl: opts.serverUrl,
+          token: opts.token,
+          userId: opts.userId,
+          datasetId: opts.datasetId,
           preventNavigationWithUnsavedChanges: (_p = opts.preventNavigationWithUnsavedChanges) !== null && _p !== void 0 ? _p : false,
       };
   }
@@ -155,7 +156,8 @@ var starboardWrap = (function (exports) {
                       this.lastSavedNotebookContent = this.notebookContent;
                       this.sendMessage({
                           type: "NOTEBOOK_SET_INIT_DATA",
-                          payload: { content, baseUrl: options.baseUrl, suggestionUrl: options.suggestionUrl, bearerToken: options.bearerToken },
+                          //@ts-ignore
+                          payload: { content, baseUrl: options.baseUrl, serverUrl: options.serverUrl, token: options.token, userId: options.userId, datasetId: options.datasetId },
                       });
                   }
                   else {

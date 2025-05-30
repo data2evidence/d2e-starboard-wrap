@@ -1,7 +1,7 @@
 {
-  "name": "@data2evidence/alp-starboard-wrap",
+  "name": "@data2evidence/d2e-starboard-wrap",
   "version": "1.0.0",
-  "description": "Wrapper element and helpers for alp-starboard-notebook",
+  "description": "Wrapper element and helpers for d2e-starboard-notebook",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alp-os/alp-starboard-wrap"
+    "url": "https://github.com/data2evidence/d2e-starboard-wrap"
   },
   "keywords": [
     "starboard",

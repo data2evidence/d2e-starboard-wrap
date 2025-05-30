@@ -22,4 +22,4 @@ The following functions in `embed.ts` is modified
 - datasetId: selected datasetId from portal
 
 `NOTEBOOK_SET_INIT_DATA`
-- this function is triggered by the starboard notebook upon its load, and the settings mentioned above are passed to the starboard notebook
+- this function is triggered by the `StarboardEmbed` upon its load, and the settings mentioned above are passed to the starboard notebook

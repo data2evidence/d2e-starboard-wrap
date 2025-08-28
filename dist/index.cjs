@@ -155,16 +155,16 @@ class StarboardEmbed extends HTMLElement {
                     const content = await options.notebookContent;
                     this.notebookContent = content;
                     this.lastSavedNotebookContent = this.notebookContent;
-                    this.sendMessage({
-                        type: "NOTEBOOK_SET_INIT_DATA",
-                        //@ts-ignore
-                        payload: { content, baseUrl: options.baseUrl, serverUrl: options.serverUrl, token: options.token, userId: options.userId, datasetId: options.datasetId },
-                    });
                 }
                 else {
                     this.notebookContent = msg.payload.content;
                     this.lastSavedNotebookContent = this.notebookContent;
                 }
+                this.sendMessage({
+                    type: "NOTEBOOK_SET_INIT_DATA",
+                    //@ts-ignore
+                    payload: { content, baseUrl: options.baseUrl, serverUrl: options.serverUrl, token: options.token, userId: options.userId, datasetId: options.datasetId },
+                });
                 this.hasReceivedReadyMessage.resolve(msg.payload);
                 options.onNotebookReadySignalMessage(msg.payload);
             }

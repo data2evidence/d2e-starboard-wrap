@@ -147,8 +147,9 @@ class StarboardEmbed extends HTMLElement {
                 }
             }
             else if (msg.type === "NOTEBOOK_READY_SIGNAL") {
+                let content = "";
                 if (options.notebookContent) {
-                    const content = await options.notebookContent;
+                    content = await options.notebookContent;
                     this.notebookContent = content;
                     this.lastSavedNotebookContent = this.notebookContent;
                 }

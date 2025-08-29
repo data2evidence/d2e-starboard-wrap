@@ -213,8 +213,9 @@ export class StarboardEmbed extends HTMLElement {
           iFrame.style.height = `${ev.data.payload.height + 2}px`; // Not sure why I need + 2
         }
       } else if (msg.type === "NOTEBOOK_READY_SIGNAL") {
+        let content = ""
         if (options.notebookContent) {
-          const content = await options.notebookContent;
+          content = await options.notebookContent;
           this.notebookContent = content;
           this.lastSavedNotebookContent = this.notebookContent;
         } else {
